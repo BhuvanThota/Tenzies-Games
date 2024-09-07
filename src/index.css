@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0B2434;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*################## Main-Section ###################*/
+
+main{
+  position: relative;
+  margin:20px auto;
+  padding: 10px auto;
+  box-sizing: content-box;
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  background-color: #F5F5F5 ;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+h3{
+  margin:10px;
+}
+
+
+/*################## restart Button ###################*/
+
+.restart{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #d12d2a;
+  background-image: url('./assets/icons8-restart.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgb(96, 59, 59) 0px 2px 10px ;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  width: 60px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.restart:hover{
+  transform: translateY(2px);
+  background-color: #d42212;
+  box-shadow: rgb(255, 13, 0)  3px 3px 20px;
+  width: 70px;
+}
+
+
+/*################## High-score Btn ###################*/
+
+.high-score{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: rgb(245, 221, 162);
+  background-image: url('./assets/high-score.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgb(247, 233, 36) 0px 2px 10px ;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  width: 60px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.high-score:hover{
+  transform: translateY(2px);
+  background-color: rgb(252, 252, 252);
+  box-shadow: gold 0px 0px 20px 3px;
+  width: 70px;
+}
+
+
+
+/*################## Game Info Section ###################*/
+
+.info{
+  margin: 0 auto;
+  width: 80%;
+}
+
+#game-info h1{
+  margin: 10px;
+  font-size: 2.5rem;
+}
+
+#game-info p{
+  font-size: 1.2rem;
+  width: 75%;
+  margin: 5px auto ;
+  color: hsl(234, 22%, 37%);
+}
+
+
+
+/*##################  Roll Count && StopWatch Section ###################*/
+
+.stopwatch-time {
+  text-align: center;
+  color: #123e85;
+  font-size: 1.4rem;
+  margin: 15px auto;
+}
+
+.mini{
+  font-size: 0.75rem;
+}
+
+.record-info{
+  margin:30px auto 10px ;
+  padding: 1px 0;
+  min-width: 25%;
+  max-width: 80%;
+  font-size: 0.9rem;
+  background-color: rgb(14, 75, 172);
+  color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: gold 0px 0px 20px 4px;
+}
+
+
+
+/*################## Game Section Section ###################*/
+
+#game-section{
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) ;
+  gap: 0.75rem;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+.die{
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgb(129, 126, 126) 0px 2px 10px ;
+  border: none;
+}
+.die:hover{
+  transform: translateY(2px);
+  cursor: pointer;
+}
+
+.value{
+  font-size: 2rem;
+  font-weight: 600;
+  margin:0;
+}
+
+.hold{
+  background-color: #59E391;
+}
+
+
+
+/*################## Game Roll Dice Button Section ###################*/
+
+#game-button{
+  background-color: #5035FF;
+  color: whitesmoke;
+  margin: 20px auto 0px ;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#game-button:hover{
+  transform: translateY(1px);
+}
+
+
+/*############################################################*/
+/*################## Media Query Section ###################*/
+
+
+@media (max-width : 600px){
+
+  #game-info h1{
+    font-size: 2.5rem;
+  }
+  #game-info p{
+    width: 90%;
+    font-size: 0.85rem;
+  }
+
+  #game-button{
+    width:90%
+  }
+
+  .stopwatch-time{
+    font-size: 1.2rem;
+  }
+
+
+  .restart{
+    width: 70px;
+    height: 55px;
+  }
+
+  .restart:hover{
+    width:75px;
+  }
+  
+  .high-score{
+    width: 70px;
+    height: 55px;
+  }
+
+  .high-score:hover{
+    width:75px;
+  }
+
+  .die{
+    width: 2.65rem;
+    height: 3.5rem;
+  }
+
+  .record-info{
+    font-size: 0.75rem;
+  }
+
+  #game-button{
+    padding: 25px;
+  }
+
+}
+
+/*############################################################*/
+/*################## Media Query Section smaller width Res Phone ###################*/
+
+
+
+@media (max-width : 400px){
+  #game-info h1{
+    font-size: 2rem;
+  }
+  #game-info p{
+    width: 90%;
+    font-size: 0.75rem;
+  }
+
+  
+  .restart{
+    width: 50px;
+    height: 50px;
+  }
+
+  .restart:hover{
+    width:55px;
+  }
+  
+  .high-score{
+    width: 50px;
+    height: 50px;
+  }
+
+  .high-score:hover{
+    width:55px;
+  }
+}

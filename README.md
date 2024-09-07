@@ -1,1 +1,2 @@
-# Tenzies-Games
+# Tenzies-Game
+ React, Local Storage
